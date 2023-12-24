@@ -98,9 +98,16 @@
             </ul>
           </div>
           <input type="hidden" id="contenido_exp" value="">
-          <div class="media-center">
+          <div class="media-center" id="imagen_">
+            <input type="hidden" id="n_img" value="1">
             <figure class="image is-3by2">
-              <img src="" id="img">
+              <!-- <img src="" id="img" alt="img_experience" > -->
+              <div class="image-wrapper">
+                <img class="image-1" src="" />
+                <img class="image-2" src="" />
+                <img class="image-3" src="" />
+                <img class="image-4" src="" />
+              </div>
             </figure>
           </div>
           <div class="media-content is-medium" style="text-align:center;">

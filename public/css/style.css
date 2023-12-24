@@ -17,6 +17,7 @@ html,body{
     width: 100%;
     max-width: 150px !important;
     height: auto;
+    margin-left: min(0.3rem);
 }
 
 .yo{
@@ -54,7 +55,7 @@ span{
 
 .container{
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 2rem;
 }
 
 .tecnology{
@@ -125,7 +126,7 @@ span{
     position: fixed;
     z-index: 3;
     bottom: 20px;
-    right: 15px;
+    right: min(1.5rem);
 }
 
 .btn_float{
@@ -137,3 +138,65 @@ span{
 .btn_float :hover{
     color: #468189;
 }
+/* #imagen_ {
+    width: 100%;
+    height: auto;
+}
+#imagen_ :hover {
+    transition: transform 0.5s ease-in-out;
+    outline: var(--b) solid var(--c);
+  outline-offset: calc(var(--s)/-2);
+  --_i: calc(100% - 2*var(--s)); 
+} */
+
+.image-wrapper {
+    width: 100%;
+    height: auto;
+    margin-left: 7px;
+  }
+  
+  .image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+  }
+  
+  .image-1 {
+    clip-path: polygon(0 0, 0 32%, 28% 0);
+    transform: translate(15px, -5px);
+    transition: transform 300ms ease;
+    transform-origin: top;
+    .image-wrapper:hover & {
+      transform: translate(0,0);
+    }
+  }
+  
+  .image-2 {
+    clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
+    transform: translate(-20px, 10px);
+    transition: transform 300ms ease;
+    .image-wrapper:hover & {
+      transform: translate(0,0);
+    }
+  }
+  
+  .image-3 {
+    clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
+    transform: translate(-10px, -10px);
+    transition: transform 300ms ease;
+    .image-wrapper:hover & {
+      transform: translate(0,0);
+    }
+  }
+  
+  .image-4 {
+    clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
+    transform: translate(-32px, 5px);
+    transition: transform 300ms ease;
+    transform-origin: top;
+    .image-wrapper:hover & {
+      transform: translate(0,0);
+    }
+  }
+  

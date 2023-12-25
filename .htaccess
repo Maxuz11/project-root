@@ -37,9 +37,10 @@ Options -Indexes
 # 	RewriteCond %{HTTP:Authorization} .
 # 	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ public/portfolio.html?$1 [L,NC,QSA]
+RewriteBase /project-root
+RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+RewriteRule ^ %1 [L,NE,R=302]
+RewriteRule ^(.*)$ public//portfolio.html?$1 [L,NC,QSA]
  </IfModule>
 
 <IfModule !mod_rewrite.c>

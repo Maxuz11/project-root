@@ -40,7 +40,7 @@ RewriteEngine On
 RewriteBase /project-root
 RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
 RewriteRule ^ %1 [L,NE,R=302]
-RewriteRule ^(.*)$ public//portfolio.html?$1 [L,NC,QSA]
+RewriteRule ^(.*)$ public/portfolio.html?$1 [L,NC,QSA]
  </IfModule>
 
 <IfModule !mod_rewrite.c>

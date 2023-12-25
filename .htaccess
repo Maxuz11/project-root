@@ -39,7 +39,7 @@ Options -Indexes
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ public/portfolio.html?$1 [L,QSA]
+RewriteRule ^(.*)$ public/portfolio.html?$1 [L,NC,QSA]
  </IfModule>
 
 <IfModule !mod_rewrite.c>

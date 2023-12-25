@@ -66,12 +66,20 @@ $("a[href='#cont_exp']").on('click', function() {
     }, 1500); 
 });
 
-$("a[href='#cont_tech']").on('click', function() {
-    var targetOffset = $("#cont_tech").offset().top;
+$("a[href='#cont_pro']").on('click', function() {
+    var targetOffset = $("#cont_pro").offset().top;
 
     $('html, body').animate({
         scrollTop: targetOffset
-    }, 1500); 
+    }, 1300); 
+});
+
+$("a[href='#cont_pro]").on('click', function(){
+    var targetOffset = $("#cont_pro").offset().top;
+
+    $('html, body').animate({
+        scrollTop: targetOffset
+    }, 1500);
 });
 
 
@@ -80,20 +88,16 @@ $('#next').on('click',function(){
     var exp = $("#contenido_exp").val();
     var num = parseInt($("#n_img").val()) +1;
      if(exp=="cronos"){
-        console.log('que hay en el de exp ',exp);
         switch(num){
             case 2:
-                console.log('que hay en n° img ',num);
                 var img = "img/cronos3.jpg";
                 $("#n_img").val('2');
             break;
             case 3:
-                console.log('que hay en n° img ',num);
                 var img = "img/prev.jpg";
                 $("#n_img").val('3');
             break;    
             default:
-                console.log('que hay en n° img ',num);
                 var img = "img/loginCronos.jpg";
                 $("#n_img").val('1');
             break;     
@@ -102,9 +106,25 @@ $('#next').on('click',function(){
         visibilidadPrev();
      }
      else{
-        console.log(' que hay en n° img ',num,' y que hay en el de exp ',exp);
+        switch(num){
+            case 2:
+                var img = "img/asiste2.png";
+                $("#n_img").val('2');
+            break;
+            case 3:
+                var img = "img/valida.png";
+                $("#n_img").val('3');
+            break;    
+            default:
+                var img = "img/loginAct.png";
+                $("#n_img").val('1');
+            break;     
+        }
+        $(".image-1, .image-2, .image-3, .image-4").attr('src', img);
+        visibilidadPrev();
      }
 });
+
 $('#prev').on('click',function(){
     // visibilidad del icono prev
     var exp = $("#contenido_exp").val();
@@ -113,17 +133,14 @@ $('#prev').on('click',function(){
         console.log('que hay en el de exp ',exp);
         switch(num){
             case 2:
-                console.log('que hay en n° img ',num);
                 var img = "img/cronos3.jpg";
                 $("#n_img").val('2');
             break;
             case 3:
-                console.log('que hay en n° img ',num);
                 var img = "img/prev.jpg";
                 $("#n_img").val('3');
             break;    
             default:
-                console.log('que hay en n° img ',num);
                 var img = "img/loginCronos.jpg";
                 $("#n_img").val('1');
             break;     
@@ -132,7 +149,22 @@ $('#prev').on('click',function(){
         visibilidadPrev();
      }
      else{
-        console.log(' que hay en n° img ',num,' y que hay en el de exp ',exp);
+        switch(num){
+            case 2:
+                var img = "img/asiste2.png";
+                $("#n_img").val('2');
+            break;
+            case 3:
+                var img = "img/valida.png";
+                $("#n_img").val('3');
+            break;    
+            default:
+                var img = "img/loginAct.png";
+                $("#n_img").val('1');
+            break;     
+        }
+        $(".image-1, .image-2, .image-3, .image-4").attr('src', img);
+        visibilidadPrev();
      }
 });
 
@@ -146,3 +178,11 @@ function visibilidadPrev(){
     }
 }
 
+
+$('#ir_jc').on('click',function(){
+    $('#modal-juntaClick').addClass('is-active');
+});
+
+function cerrarModJunta(){
+    $('#modal-juntaClick').removeClass('is-active');
+}

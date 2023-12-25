@@ -178,11 +178,27 @@ function visibilidadPrev(){
     }
 }
 
-
+//acciones para abrir o cerrar modal juntaClick
 $('#ir_jc').on('click',function(){
     $('#modal-juntaClick').addClass('is-active');
 });
 
 function cerrarModJunta(){
     $('#modal-juntaClick').removeClass('is-active');
+}
+
+$('#ir_porta').on('click',function(){
+    $('#modal-porta').addClass('is-active');
+});
+
+function cerrarModPort(){
+    $('#modal-porta').removeClass('is-active');
+}
+
+$('#ir_mobile').on('click',function(){
+    $('#modal-mobile').addClass('is-active');
+});
+
+function cerrarModMobile(){
+    $('#modal-mobile').removeClass('is-active');
 }

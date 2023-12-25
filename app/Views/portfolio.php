@@ -142,7 +142,7 @@
                 </div>
               </div>
               <div class="thumbex">
-                <div class="thumbnail">
+                <div class="thumbnail" id="ir_porta">
                   <a>
                     <img src="img/portafolio.png" alt="Portafolio">
                     <span>Portafolio</span>
@@ -150,7 +150,7 @@
                 </div>
               </div>
               <div class="thumbex">
-                <div class="thumbnail">
+                <div class="thumbnail" id="ir_mobile">
                   <a >
                     <img src="img/flutter_app.jpeg" alt="AppMobile">
                     <span>AppMobile</span>
@@ -164,6 +164,7 @@
     </div>
 
     <!-- Modal en bulma -->
+    <!--Modales -->
     <div id="modal-juntaClick" class="modal">
       <div class="modal-background"></div>
         <div class="modal-card">
@@ -220,8 +221,84 @@
         </div>
       </div>
 
-      <button class="modal-close is-large" aria-label="close"></button>
-    </div>
+    <div id="modal-porta" class="modal">
+      <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head" >
+            <p class="modal-card-title">Portafolio Web</p>
+            <button class="delete" aria-label="close" onclick="cerrarModPort()" ></button>
+          </header>
+          <section class="modal-card-body">
+            <div class="img_modal2">
+              <figure class="snip1190">
+                <img src="img/portafolio.png" alt="login"/>
+                <figcaption>
+                  <div class="square">
+                    <div></div>
+                  </div>
+                  <h2><span>Vista 1</span></h2>
+                </figcaption>
+              </figure>
+              <figure class="snip1190">
+                  <img src="img/porta2.png" alt="acción"/>
+                  <figcaption>
+                    <div class="square">
+                      <div></div>
+                    </div>
+                    <h2><span>Vista 2</span></h2>
+                  </figcaption>
+                </figure>              
+            </div>
+          
+            <p style="color: #468189;">
+            <li class="subtitle is-5">Front: CodeIgniter4,Bulma.</li> <li class="subtitle is-5">Control version: GIT</li></p>
+            <br>
+            <p class="is-4" style="color: #031926; text-align:center;">Este proyecto nace como un desafio propio de utilizar un framework como Codeigniter para programar y mostrar algunas de mis habilidades como desarrollador web. Desarrollado en CodeIgniter4 con Bulma como estilizador.
+            </p>
+            <hr style="background-color:#468189;">
+            <p>https://github.com/Maxuz11/project-root.git</p>
+          </section>
+          <footer class="modal-card-foot" style="justify-content: end; background-color: #F4E9CD">
+            <button class="button" onclick="cerrarModPort()" style="background-color: #031926; color: #fff">Cerrar</button>
+          </footer>
+        </div>
+      </div>
+
+    
+      <div id="modal-mobile" class="modal">
+      <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head" >
+            <p class="modal-card-title">Proyecto Mobile</p>
+            <button class="delete" aria-label="close" onclick="cerrarModMobile()" ></button>
+          </header>
+          <section class="modal-card-body">
+            <div class="img_modal2">
+              <figure class="snip1190">
+                <img src="img/flutter_app.jpeg" alt="app_mob"/>
+                <figcaption>
+                  <div class="square">
+                    <div></div>
+                  </div>
+                  <h2><span>Vista</span></h2>
+                </figcaption>
+              </figure>             
+            </div>
+          
+            <p style="color: #468189;">
+            <li class="subtitle is-5">Front: Flutter,Material.</li>
+            <li class="subtitle is-5">Back: Javascript(Nodejs).</li>
+            <li class="subtitle is-5">BDA: Postgresql.</li>
+            <li class="subtitle is-5">Control version: GIT</li></p>
+            <br>
+            <p class="is-4" style="color: #031926; text-align:center;">Proyecto personal de una app mobile, en la actualidad esta en desarrollo... Se ha utilizado flutter con amaterial para la interface grafica.
+            </p>
+          </section>
+          <footer class="modal-card-foot" style="justify-content: end; background-color: #F4E9CD">
+            <button class="button" onclick="cerrarModMobile()" style="background-color: #031926; color: #fff">Cerrar</button>
+          </footer>
+        </div>
+      </div>  
 
     <div class="button_float">
       <button class="button btn_float">
